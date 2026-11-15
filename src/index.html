@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Repeater</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="window-container">
+    <div class="app-card">
+      
+      <!-- Top Row: Platform & Repeat Type -->
+      <div class="grid-row">
+        <div class="field-group">
+          <label for="platformSelect">Platform</label>
+          <div class="select-wrapper">
+            <select id="platformSelect">
+              <option value="4096">👍 WhatsApp (4,096 chars)</option>
+              <option value="1000">📷 Instagram DM (1,000 chars)</option>
+              <option value="20000">⚡ FB Messenger (20,000 chars)</option>
+              <option value="63206">📘 FB Post (63,206 chars)</option>
+              <option value="custom">⚙️ Custom Limit</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-group">
+          <label for="repeatType">Repeat Type</label>
+          <div class="select-wrapper">
+            <select id="repeatType">
+              <option value="multiline">Multi-line</option>
+              <option value="single_nospace">Single-line (No spaces)</option>
+              <option value="single_space">Single-line (Space separated)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Middle Row: Limits, Unit Length, and Text Input -->
+      <div class="grid-row mid-section">
+        <div class="left-col">
+          <div class="field-group">
+            <label for="charLimit">Character Limit</label>
+            <input type="number" id="charLimit" value="4096" />
+          </div>
+
+          <div class="unit-box">
+            <span class="unit-title">Unit Length</span>
+            <span class="unit-value" id="unitLength">40</span>
+          </div>
+        </div>
+
+        <div class="right-col field-group">
+          <label for="textInput">Enter Text & Emojis</label>
+          <textarea id="textInput" rows="3" placeholder="Type text or emojis here...">My favorite emoji: 😆 and special text! 👍</textarea>
+        </div>
+      </div>
+
+      <!-- Glowing Action Button -->
+      <button id="generateBtn" class="btn-glow">
+        Generate & Copy Message
+      </button>
+
+      <!-- Status Output Terminal -->
+      <div class="field-group status-group">
+        <label>Output Status</label>
+        <div class="terminal-box" id="statusOutput">
+          <span class="log-status">[Status] Ready to generate...</span><br/>
+          <span class="log-info">[Info] Select your platform and enter text above.</span>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        © 2026 Message Repeater v2.1  |  Desktop App
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
