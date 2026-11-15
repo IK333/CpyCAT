@@ -54,6 +54,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
 }
 
 label {
@@ -161,4 +162,37 @@ textarea {
   font-size: 0.75rem;
   color: var(--text-muted);
   margin-top: 4px;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERY FOR MOBILE / TABLET
+   ========================================== */
+@media (max-width: 650px) {
+  body {
+    padding: 10px;
+    align-items: flex-start; /* Prevents clipping on very small mobile screens */
+  }
+
+  .app-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  /* Automatically stack side-by-side elements into single columns */
+  .grid-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .right-col {
+    padding-left: 0 !important;
+  }
+
+  textarea {
+    min-height: 85px;
+  }
+
+  .terminal-box {
+    height: 100px;
+  }
 }
